@@ -8,21 +8,14 @@ The unifying idea is to **build arbitrage-free term-structure objects, reduce th
 ### 1) PCA–HJM on U.S. Treasuries  
 **Notebook:** `scripts/pca_hjm.ipynb`
 
-**Mathematical frameworks:**
-- **Term-structure construction.** Convert par yields into an instantaneous forward-rate surface. With bond prices  
-  $$P(t,T)=\exp\!\left(-\int_t^T f(t,u)\,du\right),$$  
-  the instantaneous forward rate is  
-  $$f(t,T)=-\partial_T \ln P(t,T).$$
+- **Term-structure construction.** Convert par yields into an instantaneous forward-rate surface. With bond prices $P(t,T)=\exp\!\left(-\int_t^T f(t,u)\,du\right)$ the instantaneous forward rate is $f(t,T)=-\partial_T \ln P(t,T)$.
 
-- **Dimensionality reduction (PCA).** Apply PCA to changes in the forward curve to obtain data-driven factors:  
-  $$\Delta f(t,T)\approx \sum_{i=1}^k \beta_i(t)\,\phi_i(T),$$  
-  where $\phi_i(T)$ are eigen-shapes (level/slope/curvature-like) and $\beta_i(t)$ are factor time series.
+- **Dimensionality reduction (PCA).** Apply PCA to changes in the forward curve to obtain data-driven factors: $\Delta f(t,T)\approx \sum_{i=1}^k \beta_i(t)\,\phi_i(T)$ where $\phi_i(T)$ are eigen-shapes (level/slope/curvature-like) and $\beta_i(t)$ are factor time series.
 
-- **No-arbitrage dynamics (HJM).** Embed the PCA factors into an HJM model,  
-  $$df(t,T)=\alpha(t,T)\,dt+\sum_{i=1}^k \sigma_i(t,T)\,dW^i_t,$$  
+- **No-arbitrage dynamics (HJM).** Embed the PCA factors into an HJM model, $df(t,T)=\alpha(t,T)\,dt+\sum_{i=1}^k \sigma_i(t,T)\,dW^i_t$  
   with the HJM drift restriction enforcing arbitrage-free evolution.
 
-**Outcome:** a smooth forward surface, interpretable rates factors, and arbitrage-consistent curve simulations.
+The notebook produces a smooth forward surface, interpretable rates factors, and arbitrage-consistent curve simulations.
 
 ---
 
