@@ -48,7 +48,7 @@ Hence a smooth SPY implied-vol surface and term-structure risk-premia signals.
 
 The connection is **discounting regimes → crash-hedging demand → equity-vol skew**:
 
-- The **PCA–HJM** notebook builds an arbitrage-free discount curve. Its factors drive the discount factor $D(T)=\exp\!\left(-\int_0^T r(u)\,du\right)$ which is an input to equity-derivative pricing and to the put–call-parity forwards used in the SVI notebook.
+- The **PCA–HJM** notebook builds an arbitrage-free discount curve. Its factors drive the discount factor $D(T)=\exp\left(-\int_0^T r(u)\,du\right)$ which is an input to equity-derivative pricing and to the put–call-parity forwards used in the SVI notebook.
 
 - The **OU Entry–Exit** notebook provides timing on when the discounting state is unusually stressed or loose. Such regimes often align with shifts in equity downside risk appetite.
 
