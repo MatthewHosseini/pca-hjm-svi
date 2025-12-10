@@ -7,7 +7,7 @@ The unifying idea with the notebooks in this repo is to **build arbitrage-free t
 The spine is **discounting regimes → crash-hedging demand → equity-vol skew**, with an IRRBB-motivated interpretation:
 
 - The **PCA–HJM** notebook builds an arbitrage-free discount curve. Its factors drive the discount factor
-$D(T) = \exp\left(-\int_0^T r(u)\,du\right)$
+$D(T) = \exp\left(-\int_0^T r(u) du\right)$
   which is an input to:
   - banking-book EVE/NII revaluation; and  
   - equity-derivative pricing and the put–call-parity forwards used in the SVI notebook.
