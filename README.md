@@ -8,7 +8,7 @@ The spine is **discounting regimes → crash-hedging demand → equity-vol skew*
 
 - The **PCA–HJM** notebook builds an arbitrage-free discount curve. Its factors drive the discount factor
   $
-  D(T)=\exp\left(-\int_0^T r(u)\,du\right)
+  D(T)=exp \left (-\int_0^T r(u)\,du \right)
   $
   which is an input to:
   - banking-book EVE/NII revaluation; and  
